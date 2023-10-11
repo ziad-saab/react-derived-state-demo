@@ -23,7 +23,10 @@ export const WetComponent = () => {
     // because we're using it inside the closure passed to setInterval.
     // This means every time counter changes, the useEffect function will
     // be re-run, keeping the correct value of counter in the closure
-  }, [counter]);
+    // 
+    // To test this, remove counter from the dependency array, then
+    // reload the app.
+  }, []);
 
   return (
     <div>
